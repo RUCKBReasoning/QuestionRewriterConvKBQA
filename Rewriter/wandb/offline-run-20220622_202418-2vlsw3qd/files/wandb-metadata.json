@@ -1,0 +1,20 @@
+{
+    "os": "Linux-5.13.0-28-generic-x86_64-with-glibc2.17",
+    "python": "3.8.12",
+    "heartbeatAt": "2022-06-22T12:24:19.824237",
+    "startedAt": "2022-06-22T12:24:18.946049",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 4,
+    "cpu_count": 64,
+    "cuda": null,
+    "args": [
+        "--pre_train"
+    ],
+    "state": "running",
+    "program": "train_rewriter.py",
+    "codePath": "train_rewriter.py",
+    "host": "ubuntu",
+    "username": "kexirui",
+    "executable": "/home/kexirui/miniconda3/envs/pytorch/bin/python"
+}

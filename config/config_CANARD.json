@@ -1,0 +1,33 @@
+{   "gen_args" :
+    {
+        "model_path"                    : "t5-base",
+        "dataset_dir"                   : "Datasets/CANARD/",
+        "result_fn"                     : "qw.txt",
+        "train_fn"                      : "train.json",
+        "valid_fn"                      : "dev.json",
+        "test_fn"                       : "test.json",
+        "pred_rels_fn"                  : "Datasets/ConvQuestions/pred_relations.json",
+        "max_in_len"                    : 512,
+        "max_out_len"                   : 72,
+        "max_candidates"                : 1,
+        "is_pretrain"                   : true,
+        "is_selftrain"                  : false
+
+    },
+    "train_args" :
+    {
+        "output_dir"                    : "checkpoints/t5_finetune",
+        "save_strategy"                 : "epoch",
+        "do_train"                      : true,
+        "do_eval"                       : false,
+        "overwrite_output_dir"          : false,
+        "prediction_loss_only"          : true,
+        "num_train_epochs"              : 5,
+        "save_total_limit"              : 2,
+        "per_device_train_batch_size"   : 32,
+        "per_device_eval_batch_size"    : 32,
+        "gradient_accumulation_steps"   : 4,
+        "learning_rate"                 : 1e-4,
+        "seed"                          : 42
+    }
+}

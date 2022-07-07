@@ -1,0 +1,34 @@
+  0%|                                                                                                                                                                            | 0/1230 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "train_rewriter.py", line 290, in <module>
+    cqr.train()
+  File "train_rewriter.py", line 151, in train
+    trainer.train()
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/transformers/trainer.py", line 1422, in train
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/transformers/trainer.py", line 2011, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/transformers/trainer.py", line 2043, in compute_loss
+    outputs = model(**inputs)
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 1601, in forward
+    encoder_outputs = self.encoder(
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 1033, in forward
+    layer_outputs = layer_module(
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 668, in forward
+    self_attention_outputs = self.layer[0](
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 574, in forward
+    attention_output = self.SelfAttention(
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 537, in forward
+    attn_weights = nn.functional.dropout(
+  File "/home/kexirui/miniconda3/envs/pytorch/lib/python3.8/site-packages/torch/nn/functional.py", line 1279, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+RuntimeError: CUDA out of memory. Tried to allocate 96.00 MiB (GPU 0; 23.70 GiB total capacity; 21.73 GiB already allocated; 88.56 MiB free; 21.81 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

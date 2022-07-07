@@ -1,0 +1,33 @@
+{   "gen_args" :
+    {
+        "model_path"                    : "checkpoints/t5_finetune",
+        "dataset_dir"                   : "Datasets/ConvQuestions",
+        "result_fn"                     : "qw.txt",
+        "train_fn"                      : "train_set/q_selftrain.json",
+        "valid_fn"                      : "dev_set/q_selftrain.json",
+        "test_fn"                       : "test_set/q_selftrain.json",
+        "pred_rels_fn"                  : "Datasets/ConvQuestions/pred_relations.json",
+        "max_in_len"                    : 512,
+        "max_out_len"                   : 72,
+        "max_candidates"                : 1,
+        "is_pretrain"                   : false,
+        "is_selftrain"                  : true                    
+
+    },
+    "train_args" :
+    {
+        "output_dir"                    : "checkpoints/t5_selftrain_rr",
+        "save_strategy"                 : "epoch",
+        "do_train"                      : true,
+        "do_eval"                       : false,
+        "overwrite_output_dir"          : false,
+        "prediction_loss_only"          : true,
+        "num_train_epochs"              : 2,
+        "save_total_limit"              : 2,
+        "per_device_train_batch_size"   : 32,
+        "per_device_eval_batch_size"    : 32,
+        "gradient_accumulation_steps"   : 4,
+        "learning_rate"                 : 1e-4,
+        "seed"                          : 42
+    }
+}
