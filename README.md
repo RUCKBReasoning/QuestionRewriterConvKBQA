@@ -69,7 +69,7 @@ python  Rewriter/retrieve_relation.py --construct
 python  Rewriter/train_relation_retriever.py
 ```
 
-##Question Rewriter
+## Question Rewriter
 1. How to pre-train the question rewriter?
 ```
 python  Rewriter/train_rewriter.py --pre_train
