@@ -1,5 +1,2 @@
-## 给定问题，解析对应的KoPL程序并返回，用到了预训练好的BART checkpoint (QUestion2KoPL)
+先下载KB和预训练好的BART checkpoint (Question2KoPL）放置在上层目录
 
-```
-CUDA_VISIBLE_DEVICES=gpu_id python -m Demo.demo
-```
