@@ -61,6 +61,7 @@ We evaluate our method on the benchmark ConvQuestions. You can download [here](h
 ## Relation Retriever
 1. How to construct pseudo (question, relation) dataset?
 ```
+python  Rewriter/retrieve_subgraph.py --pre_train
 python  Rewriter/retrieve_relation.py --construct
 ```
 
